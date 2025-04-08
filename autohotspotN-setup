@@ -5,7 +5,7 @@
 #This version will provide internet when using the hotspot IF an ethernet cable is plugged in"
 #This will be useful with AREDN mesh networking
 #km4ack 20190409
-#km4ack 20191006 last edit
+#heady 20250408 last edit
 
 #check if run as root
 who=$(whoami)
@@ -79,7 +79,7 @@ wget http://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/hostapd
 #set new hotspot passwd
 sed -i "s/wpa_passphrase=1234567890/wpa_passphrase=$wifipasswd/" $HOME/temp/hostapd.txt
 #set country to US
-sed -i 's/country_code=GB/country_code=US/' $HOME/temp/hostapd.txt
+sed -i 's/country_code=DE/country_code=DE/' $HOME/temp/hostapd.txt
 
 #move hostapd to correct location
 mv $HOME/temp/hostapd.txt /etc/hostapd/hostapd.conf
